@@ -82,7 +82,7 @@ def number(rng: random.Random, depth: int) -> str:
     """A numeric expression, so the sample usually reaches the evaluator instead of the parser."""
     if depth <= 0:
         return rng.choice(NUMBERS)
-    kind = rng.randrange(7)
+    kind = rng.randrange(8)
     if kind == 0:
         return rng.choice(NUMBERS)
     if kind == 1:
@@ -98,6 +98,8 @@ def number(rng: random.Random, depth: int) -> str:
         return f"len({text(rng, depth - 1)})"
     if kind == 5:
         return f"sum({rng.choice(NUMBER_LISTS)})"
+    if kind == 6:
+        return f"average({rng.choice(NUMBER_LISTS)})"
     return (f"{rng.choice(('min', 'max'))}({number(rng, depth - 1)}, "
             f"{number(rng, depth - 1)})")
 

@@ -10,7 +10,7 @@
 - **Total Classes**: `50`
 - **Total Top-Level Functions**: `91`
 - **Total Class Methods**: `365`
-- **Total Source Lines**: `4674`
+- **Total Source Lines**: `4676`
 
 ---
 
@@ -471,7 +471,7 @@
 ### [`tests/test_fuzz.py`](tests/test_fuzz.py)
 > *Deterministic crash fuzz: random and mutated source is a Pebble error, never a host crash.*
 
-**Size**: `262` lines (`10298` bytes)
+**Size**: `264` lines (`10370` bytes)
 
 **Classes:**
 - `class FuzzTests` - *Every corpus is seeded, so a failure names a sample that always reproduces.*
