@@ -1,11 +1,11 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "task-pebble-reforge-close-001",
-    "last_phase": "phase 5",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1794858287.3152022,
+    "task_id": "task-pebble-license-gap-001",
+    "last_phase": "phase 2",
+    "active_phase": 2,
+    "status": "in_progress",
+    "updated_at": 1794858748.1755536,
     "owner": "vibe:1",
     "started_by": "vibe:1",
     "continuations": [],
@@ -15,22 +15,14 @@
         "path": "projects/pebble"
       }
     ],
-    "completed_at": 1794858300.6727126,
-    "completed_head": "3aa39693f9f2d66caa88bfcf56dc02e1bfcb2171",
-    "completed_tree": "4505064ead93a304e9e17f6932fc2a019bb2aab7"
+    "impact_assessment": {
+      "why": "A previous edit updated LICENSE and LICENSES/LicenseRef-AL-1.1.txt in lockstep by hand; no gate or test fails if the two AL-1.1 copies drift apart later.",
+      "benefits": "268th test pins byte-identity of the two license copies; .gitignore comment dedupe removes a stale duplicate header.",
+      "risks": "contract: none (additive test); dependency: none; concurrency: none; state: none",
+      "mitigation": "Additive test only, no source changes; full 4/4 gates re-run before commit."
+    }
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 14",
-      "phase_num": 3,
-      "description": "Reforge stage 14: window 42, 3 commit(s), 8 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793293376.8552165,
-      "timestamp_str": "2026-10-29 20:02:56",
-      "agent": "opencode"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 15",
@@ -275,6 +267,30 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "task-pebble-license-gap-001",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/1] Close the license-copy drift gap with an identity test",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794858748.1755536,
+      "timestamp_str": "2026-11-16 22:52:28",
+      "agent": "vibe:1",
+      "impact_assessment": {
+        "why": "A previous edit updated LICENSE and LICENSES/LicenseRef-AL-1.1.txt in lockstep by hand; no gate or test fails if the two AL-1.1 copies drift apart later.",
+        "benefits": "268th test pins byte-identity of the two license copies; .gitignore comment dedupe removes a stale duplicate header.",
+        "risks": "contract: none (additive test); dependency: none; concurrency: none; state: none",
+        "mitigation": "Additive test only, no source changes; full 4/4 gates re-run before commit."
+      },
+      "plan_digest": "5b79788f9951ba140b98a9eec84834cd434d01311d1a5e8839ca4fd03e516358",
+      "workspaces": [
+        {
+          "name": "pebble",
+          "path": "projects/pebble"
+        }
+      ]
     }
   ]
 }

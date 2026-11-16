@@ -83,6 +83,7 @@ pebble/
     ├── test_evaluator.py
     ├── test_fuzz.py            <- seeded crash fuzz over lexer, parser, evaluator and CLI
     ├── test_hardening.py
+    ├── test_license.py          <- the two AL-1.1 copies stay byte-identical
     ├── test_lexer.py
     ├── test_lists.py           <- sort, sum and average, their rules and their guards
     ├── test_parser.py

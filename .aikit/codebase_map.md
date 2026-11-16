@@ -6,14 +6,14 @@
 ---
 
 ## 📊 Codebase Metrics
-- **Total Python Modules**: `21`
-- **Total Classes**: `50`
+- **Total Python Modules**: `22`
+- **Total Classes**: `51`
 - **Total Top-Level Functions**: `91`
-- **Total Class Methods**: `365`
-- **Total Source Lines**: `4676`
+- **Total Class Methods**: `366`
+- **Total Source Lines**: `4702`
 
 ## 🧭 Map Coverage
-- **Indexed**: python (`21` module(s))
+- **Indexed**: python (`22` module(s))
 - **Not indexed by this map**: none (no non-Python source files were found)
 
 ---
@@ -574,6 +574,17 @@
 
 **Functions:**
 - `def pairs(source)` - *Every (kind, value) in `source`, the trailing EOF token excluded.*
+
+---
+
+### [`tests/test_license.py`](tests/test_license.py)
+> *License-file identity test: the two AL-1.1 copies must never drift apart.*
+
+**Size**: `26` lines (`941` bytes)
+
+**Classes:**
+- `class LicenseTests` - *The project ships two byte-identical copies of the Aegean License 1.1.*
+  - Method `.test_license_and_reuse_copy_are_identical()` - *REUSE metadata names the SPDX text, so any edit must land in both files.*
 
 ---
 
