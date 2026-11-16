@@ -1,66 +1,25 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "task-pebble-v15-release-0-3-0",
-    "last_phase": "in_progress",
+    "task_id": "task-pebble-reforge-close-001",
+    "last_phase": "phase 5",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793258728.60835,
-    "owner": "kilo:v15-release",
-    "started_by": "kilo:v15-release",
+    "updated_at": 1794858287.3152022,
+    "owner": "vibe:1",
+    "started_by": "vibe:1",
     "continuations": [],
-    "completed_at": 1793258736.3108895
+    "workspaces": [
+      {
+        "name": "pebble",
+        "path": "projects/pebble"
+      }
+    ],
+    "completed_at": 1794858300.6727126,
+    "completed_head": "3aa39693f9f2d66caa88bfcf56dc02e1bfcb2171",
+    "completed_tree": "4505064ead93a304e9e17f6932fc2a019bb2aab7"
   },
   "checkpoints": [
-    {
-      "task_id": "task-pebble-v15-release-0-3-0",
-      "phase": "in_progress",
-      "phase_num": 2,
-      "description": "[1/3] Plan: bump the declared version to 0.3.0 under ADR-020, because thirteen language increments (ADR-010 to ADR-018) have landed since 0.2.0 and the number no longer describes the surface; ADR-019's guard forces __version__ to follow",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793258673.7300613,
-      "timestamp_str": "2026-10-29 10:24:33",
-      "agent": "kilo:v15-release",
-      "impact_assessment": {
-        "why": "The package still declares 0.2.0 after ten shipped increments that added eleven builtins and a fuzz guard, so the version number understates what a user gets and cannot serve as a release marker.",
-        "benefits": "The declared version describes the surface users actually have, and the existing version-coherence test proves the bump reached both files.",
-        "risks": "contract: --version prints 0.3.0; dependency: none; concurrency: none; state: the two version literals change together.",
-        "mitigation": "ADR-020 records why this bump and not a major one (no v1 contract broken, only additions); ADR-019's test is the guard; full aikit check pebble gate."
-      }
-    },
-    {
-      "task_id": "task-pebble-v15-release-0-3-0",
-      "phase": "in_progress",
-      "phase_num": 3,
-      "description": "[2/3] Version 0.3.0 declared in pyproject.toml and __version__, --version prints pebble 0.3.0, ADR-019's coherence test and all 264 tests pass; ADR-020 and README status updated; aikit check pebble 4/4 gates green; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793258728.60835,
-      "timestamp_str": "2026-10-29 10:25:28",
-      "agent": "kilo:v15-release"
-    },
-    {
-      "task_id": "task-pebble-v15-release-0-3-0",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'task-pebble-v15-release-0-3-0' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793258736.3108907,
-      "timestamp_str": "2026-10-29 10:25:36",
-      "agent": "kilo:v15-release"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 13",
-      "phase_num": 3,
-      "description": "Reforge stage 13: window 39, 3 commit(s), 7 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793293282.034243,
-      "timestamp_str": "2026-10-29 20:01:22",
-      "agent": "opencode"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 14",
@@ -240,6 +199,82 @@
       "timestamp_str": "2026-11-16 22:41:09",
       "agent": "unidentified",
       "operator_task": "task-pebble-v15-release-0-3-0"
+    },
+    {
+      "task_id": "task-pebble-reforge-close-001",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/1] Close the reforge full-history audit and settle the tree",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794858283.3022847,
+      "timestamp_str": "2026-11-16 22:44:43",
+      "agent": "vibe:1",
+      "impact_assessment": {
+        "why": "The v15 release task left a stale ledger tail, two unreviewed reforge stages and uncommitted legal and state files; the strict check refuses delivery until a task owns the tree.",
+        "benefits": "Full 62-commit audit coverage recorded, gates green, ledger fresh.",
+        "risks": "contract: ledger schema fields; dependency: none; concurrency: single-agent per project lock; state: ledger archive file introduced.",
+        "mitigation": "Use only documented aikit/reforge commands, verify 4/4 gates before each commit, no force."
+      },
+      "plan_digest": "1c09c8888e32d36c8be31ded1683030d0dc00aa5c62b59f0ece342ce9c2e2ae6",
+      "workspaces": [
+        {
+          "name": "pebble",
+          "path": "projects/pebble"
+        }
+      ]
+    },
+    {
+      "task_id": "task-pebble-reforge-close-001",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[1/1] Phase 4: 4/4 gates passed on the committed tree (checklists: passed)",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794858286.7351103,
+      "timestamp_str": "2026-11-16 22:44:46",
+      "agent": "vibe:1",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "pebble",
+          "path": "projects/pebble"
+        }
+      ]
+    },
+    {
+      "task_id": "task-pebble-reforge-close-001",
+      "phase": "phase 5",
+      "phase_num": 5,
+      "description": "[1/1] Complete: reforge audit closed, tree settled",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794858287.3152022,
+      "timestamp_str": "2026-11-16 22:44:47",
+      "agent": "vibe:1",
+      "workspaces": [
+        {
+          "name": "pebble",
+          "path": "projects/pebble"
+        }
+      ]
+    },
+    {
+      "task_id": "task-pebble-reforge-close-001",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'task-pebble-reforge-close-001' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794858300.734417,
+      "timestamp_str": "2026-11-16 22:45:00",
+      "agent": "vibe:1",
+      "head": "3aa39693f9f2d66caa88bfcf56dc02e1bfcb2171",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
