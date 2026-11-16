@@ -9,6 +9,8 @@
 A tiny, dependency-free scripting language: lexer, parser, tree-walking evaluator and REPL.
 Built as an AIKit evaluation project — the process is under test as much as the code.
 
+> **Archived**: Retired after the v1.1 release and a complete 62-commit Reforge audit; development concluded (archived 2026-11-16). This project is read-only; its GitHub repository is archived.
+
 ## ⚡ 30-Second Cold-Start Quick Reference
 
 - **Runtime Prerequisites**: Python 3.10 or newer (developed and tested on Python 3.14); nothing else, standard library only

@@ -67,5 +67,11 @@
     "source-available",
     "aegean-license",
     "commercial-license"
-  ]
+  ],
+  "archived": true,
+  "archived_at": "2026-11-16",
+  "archive_reason": "Retired after the v1.1 release and a complete 62-commit Reforge audit; development concluded",
+  "archive_repo": "AegeanWorks/Pebble",
+  "archive_description": "[ARCHIVED] A tiny, dependency-free scripting language: lexer, parser, tree-walking evaluator and REPL. Built as an AIKit evaluation project \u2014 the process is under test as much as the code.",
+  "archive_origin": "projects/pebble"
 }
