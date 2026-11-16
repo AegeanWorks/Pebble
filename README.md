@@ -45,7 +45,9 @@ pebble/
 │   ├── media.json            <- social preview and artwork metadata
 │   ├── project.json
 │   ├── reforge.json          <- Reforge audit state
-│   └── task_ledger.json      <- the task ledger: plan and milestone checkpoints
+│   ├── task_ledger.json      <- the task ledger: plan and milestone checkpoints
+│   └── task_ledger_archive.jsonl <- archived checkpoints, moved out of the ledger
+├── .gitattributes
 ├── .gitignore
 ├── LICENSE
 ├── LICENSES/                 <- REUSE license texts
